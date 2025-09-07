@@ -1,6 +1,6 @@
 import { CombinedContextProvider } from "./context/combined-context-provider";
 
-export default async function CanvasLayout({
+export default function CanvasLayout({
   children,
   params,
 }: {
