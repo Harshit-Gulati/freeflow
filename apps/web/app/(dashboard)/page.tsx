@@ -3,9 +3,11 @@
 import { useSearchParams } from "next/navigation";
 import { BoardList } from "./_components/board-list";
 import { EmptyOrg } from "./_components/empty-org";
+import { useOrganisationContext } from "./context/organisation-context";
 
-const DashboardPage = ({ organization }: { organization: any }) => {
+const DashboardPage = () => {
   const searchParams = useSearchParams();
+  const { organization } = useOrganisationContext();
 
   const query = {
     search: searchParams.get("search") ?? undefined,
