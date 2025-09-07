@@ -1,15 +1,22 @@
-import { Circle, Cursor, Pen, Rectangle, Arrow, Text } from "@repo/ui/icons";
 import { ToolButton } from "./tool-button";
 import { Tools } from "@/types/canvas";
 import { useToolContext } from "../context";
+import {
+  IconArrowUpRight,
+  IconCircle,
+  IconLetterT,
+  IconPencil,
+  IconPointerFilled,
+  IconRectangle,
+} from "@tabler/icons-react";
 
 const tools = [
-  { label: "Select", icon: Cursor, tool: Tools.Select },
-  { label: "Text", icon: Text, tool: Tools.Text },
-  { label: "Arrow", icon: Arrow, tool: Tools.Arrow },
-  { label: "Rectangle", icon: Rectangle, tool: Tools.Rectangle },
-  { label: "Ellipse", icon: Circle, tool: Tools.Ellipse },
-  { label: "Pencil", icon: Pen, tool: Tools.Pencil },
+  { label: "Select", icon: IconPointerFilled, tool: Tools.Select },
+  { label: "Text", icon: IconLetterT, tool: Tools.Text },
+  { label: "Arrow", icon: IconArrowUpRight, tool: Tools.Arrow },
+  { label: "Rectangle", icon: IconRectangle, tool: Tools.Rectangle },
+  { label: "Ellipse", icon: IconCircle, tool: Tools.Ellipse },
+  { label: "Pencil", icon: IconPencil, tool: Tools.Pencil },
 ];
 
 export const Toolbar = () => {

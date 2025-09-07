@@ -1,5 +1,5 @@
 import { CreateOrganization } from "@clerk/nextjs";
-import { Modal, ModalContent, ModalTrigger } from "@repo/ui";
+import { Modal, ModalContent, ModalTrigger } from "@/components/Modal";
 import Image from "next/image";
 
 export const EmptyOrg = () => {

@@ -1,13 +1,15 @@
 import { CombinedContextProvider } from "./context/combined-context-provider";
 
-export default function CanvasLayout({
+interface CanvasLayoutProps {
+  children: React.ReactElement;
+  params: Promise<{ boardId: string }>;
+}
+
+export default async function CanvasLayout({
   children,
   params,
-}: {
-  children: React.ReactElement;
-  params: { boardId: string };
-}) {
-  const { boardId } = params;
+}: CanvasLayoutProps) {
+  const { boardId } = await params;
   return (
     <CombinedContextProvider boardId={boardId}>
       {children}

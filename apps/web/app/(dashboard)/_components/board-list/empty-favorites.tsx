@@ -1,10 +1,10 @@
-import { HeartIcon } from "@repo/ui/icons";
+import { IconHeart } from "@tabler/icons-react";
 
 export const EmptyFavorites = () => {
   return (
     <div className="h-full w-full flex flex-col justify-center items-center space-y-2 animate-fadeIn">
       <div>
-        <HeartIcon size={100} strokeColor="var(--color-primary-text)" />
+        <IconHeart size={100} stroke="var(--color-primary-text)" />
       </div>
       <div className="text-primary-text text-4xl font-semibold">
         No favorite boards!

@@ -15,7 +15,6 @@
     "@clerk/nextjs": "^6.19.2",
     "@prisma/client": "^6.12.0",
     "@repo/hooks": "*",
-    "@repo/ui": "*",
     "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/postcss": "^4.1.6",
     "date-fns": "^4.1.0",

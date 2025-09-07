@@ -1,7 +1,6 @@
 "use client";
 
 import { forwardRef } from "react";
-import { twMerge } from "tailwind-merge";
 
 interface InputProps {
   type?: string;
@@ -20,10 +19,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         placeholder={placeholder}
         onChange={onChange}
         value={value}
-        className={twMerge(
-          `p-2 bg-unit-bg2 rounded-md text-primary-text focus:outline-2 focus:outline-purpure`,
-          className
-        )}
+        className={`p-2 bg-unit-bg2 rounded-md text-primary-text focus:outline-2 focus:outline-purpure ${className}`}
       />
     );
   }

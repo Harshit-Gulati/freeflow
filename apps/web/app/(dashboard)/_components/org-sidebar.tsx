@@ -1,9 +1,9 @@
 "use client";
 
-import { DashboardIcon, StarIcon } from "@repo/ui/icons";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ClerkOrganisationSwitcher } from "./org-switcher";
+import { IconLayoutDashboardFilled, IconStar } from "@tabler/icons-react";
 
 export const OrgSidebar = () => {
   const searchParams = useSearchParams();
@@ -25,9 +25,9 @@ export const OrgSidebar = () => {
           href="/"
           className={`w-full p-2 flex justify-start items-center ${!favorites && `bg-unit-bg2`} hover:bg-unit-bg2 rounded-md text-primary-text`}
         >
-          <DashboardIcon
-            fillColor={favorites ? "none" : "var(--color-purpure)"}
-            strokeColor={
+          <IconLayoutDashboardFilled
+            fill={favorites ? "none" : "var(--color-purpure)"}
+            stroke={
               favorites ? "var(--color-primary-text)" : "var(--color-purpure)"
             }
             className="mr-2"
@@ -43,9 +43,9 @@ export const OrgSidebar = () => {
           }}
           className={`w-full p-2 flex justify-start items-center ${favorites && `bg-unit-bg2`} hover:bg-unit-bg2 rounded-md`}
         >
-          <StarIcon
-            fillColor={favorites ? "var(--color-purpure)" : "none"}
-            strokeColor={
+          <IconStar
+            fill={favorites ? "var(--color-purpure)" : "none"}
+            stroke={
               favorites ? "var(--color-purpure)" : "var(--color-primary-text)"
             }
             className="mr-2"

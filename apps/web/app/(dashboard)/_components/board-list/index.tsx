@@ -1,4 +1,4 @@
-import { LoaderIcon, PlusIcon } from "@repo/ui/icons";
+import { LoaderIcon } from "@/components/loader-icon";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
@@ -7,6 +7,7 @@ import { BoardCard } from "./board-card";
 import { EmptyFavorites } from "./empty-favorites";
 import { EmptyNotes } from "./empty-notes";
 import { EmptySearch } from "./empty-search";
+import { IconPlus } from "@tabler/icons-react";
 
 interface BoardListProps {
   organizationId: string;
@@ -100,11 +101,7 @@ export const BoardList = ({ organizationId, query }: BoardListProps) => {
           onClick={createClickHandler}
           disabled={loading}
         >
-          {loading ? (
-            <LoaderIcon size={48} className="mb-4" />
-          ) : (
-            <PlusIcon size={48} className="mb-4" />
-          )}
+          {loading ? <LoaderIcon /> : <IconPlus size={48} className="mb-4" />}
           {loading ? "Creating..." : "New Board"}
         </button>
         {boards.map((board: any) => (

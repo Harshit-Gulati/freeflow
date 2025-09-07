@@ -1,10 +1,10 @@
-import { NoResultIcon } from "@repo/ui/icons";
+import { IconZoomExclamation } from "@tabler/icons-react";
 
 export const EmptySearch = () => {
   return (
     <div className="h-full w-full flex flex-col justify-center items-center space-y-2 animate-fadeIn">
       <div>
-        <NoResultIcon size={100} strokeColor="var(--color-primary-text)" />
+        <IconZoomExclamation size={100} stroke="var(--color-primary-text)" />
       </div>
       <div className="text-primary-text text-4xl font-semibold">
         No Results Found!

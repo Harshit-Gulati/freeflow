@@ -1,5 +1,4 @@
 import { useAuth } from "@clerk/nextjs";
-import { LinkIcon, Trash } from "@repo/ui/icons";
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +6,7 @@ import { Footer } from "./footer";
 import { useState } from "react";
 import { mutate } from "swr";
 import { toast } from "sonner";
+import { IconLink, IconTrash } from "@tabler/icons-react";
 
 interface BoardCardProps {
   id: string;
@@ -111,14 +111,14 @@ export const BoardCard = ({
               className="aspect-square rounded-md hover:bg-unit-bg2 px-2 py-1 font-medium text-base cursor-pointer flex justify-start items-center transition-all mr-1"
               onClick={copyLinkHandler}
             >
-              <LinkIcon size={20} />
+              <IconLink size={20} />
             </button>
             <button
               className="aspect-square rounded-md hover:bg-unit-bg2 px-2 py-1 font-medium text-base cursor-pointer flex justify-start items-center transition-all"
               onClick={onDelete}
               disabled={pending}
             >
-              <Trash size={20} />
+              <IconTrash size={20} />
             </button>
           </div>
         </div>

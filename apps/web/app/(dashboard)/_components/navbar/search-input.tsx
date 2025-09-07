@@ -1,11 +1,11 @@
 "use client";
 
-import { Input } from "@repo/ui";
-import { SearchIcon } from "@repo/ui/icons";
+import { Input } from "@/components/input";
 import qs from "query-string";
 import { useDebounce } from "@repo/hooks";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IconSearch } from "@tabler/icons-react";
 
 export const SearchInput = () => {
   const router = useRouter();
@@ -32,9 +32,9 @@ export const SearchInput = () => {
 
   return (
     <div className="w-full relative">
-      <SearchIcon
+      <IconSearch
         className="absolute top-1/2 left-3 transform -translate-y-1/2 text-secondary-text"
-        strokeColor="var(--color-primary-text)"
+        stroke="var(--color-primary-text)"
       />
       <Input
         type="text"

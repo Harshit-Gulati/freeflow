@@ -1,5 +1,5 @@
-import { NoteIcon } from "@repo/ui/icons";
 import { useOrganization } from "@clerk/nextjs";
+import { IconPencil } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { toast } from "sonner";
@@ -40,11 +40,7 @@ export const EmptyNotes = () => {
   return (
     <div className="h-full w-full flex flex-col justify-center items-center space-y-2 animate-fadeIn">
       <div>
-        <NoteIcon
-          size={100}
-          strokeColor="var(--color-primary-text)"
-          fillColor="var(--color-primary-text)"
-        />
+        <IconPencil size={100} stroke="var(--color-primary-text)" />
       </div>
       <div className="text-primary-text text-4xl font-semibold">
         Create your first board!

@@ -1,4 +1,4 @@
-import { Trash } from "@repo/ui/icons";
+import { IconTrash } from "@tabler/icons-react";
 import { useCanvasContext } from "../../context/canvas-context";
 import { ToolButton } from "../tool-button";
 
@@ -21,7 +21,7 @@ export const MiscControls = () => {
   return (
     <div className="text-primary-text flex justify-center items-center">
       <ToolButton
-        icon={Trash}
+        icon={IconTrash}
         label={"Delete layer"}
         isActive={false}
         isDisabled={false}

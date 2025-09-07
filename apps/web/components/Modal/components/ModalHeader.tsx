@@ -1,6 +1,6 @@
 "use client";
 
-import { CloseIcon } from "../../icons/CloseIcon";
+import { IconX } from "@tabler/icons-react";
 import { useModalContext } from "./modal.context";
 import { ModalTrigger } from "./ModalTrigger";
 
@@ -16,12 +16,7 @@ export const ModalHeader = ({ children }: ModalHeaderProps) => {
       <div>{children}</div>
       <ModalTrigger>
         <div className="ml-auto">
-          <CloseIcon
-            active={open}
-            animated={true}
-            size={28}
-            className="cursor-pointer hover:stroke-purple-600"
-          />
+          <IconX size={28} className="cursor-pointer hover:stroke-purple-600" />
         </div>
       </ModalTrigger>
     </div>

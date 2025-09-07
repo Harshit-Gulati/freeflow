@@ -1,4 +1,4 @@
-import { StarIcon } from "@repo/ui/icons";
+import { IconStar } from "@tabler/icons-react";
 
 interface FooterProps {
   title: string;
@@ -34,10 +34,10 @@ export const Footer = ({
           onClick();
         }}
       >
-        <StarIcon
+        <IconStar
           size={18}
           className="text-gray-dash dark:text-secondary-text hover:text-white"
-          fillColor={isFavorite ? "currentColor" : "none"}
+          fill={isFavorite ? "currentColor" : "none"}
         />
       </button>
     </div>
