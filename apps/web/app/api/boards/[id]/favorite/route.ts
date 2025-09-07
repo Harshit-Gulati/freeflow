@@ -27,7 +27,7 @@ export async function GET(req: NextRequest) {
 
 export async function POST(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     const { userId } = await auth();
@@ -35,7 +35,7 @@ export async function POST(
     if (!userId)
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-    const boardId = params.id;
+    const { id: boardId } = await context.params;
 
     const existingFavorite = await prisma.userFavorite.findFirst({
       where: {
