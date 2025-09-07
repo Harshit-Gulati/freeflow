@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-highlight-text: #7b57e0;
+  --color-primary-text: #2b2e48;
+  --color-secondary-text: #7d7d7d;
+  --color-error-text: #c71026;
+  --color-success-text: #0b8a00;
+
+  --color-purpure: #7b57e0;
+  --color-gray-stroke: #dcdcdd;
+  --color-unit-bg: #ffffff;
+  --color-unit-bg2: #f1f3f4;
+  --color-gray-bg: #f1f3f4;
+  --color-gray-dash: #dce3eb;
+  --color-app-green: #50c099;
+  --color-app-blue: #5daaee;
+  --color-app-salmon: #f9837c;
+  --color-app-yellow: #ffc565;
+
+  --animate-slidein: slidein 0.5s cubic-bezier(0.36, 1.01, 0.32, 1) forwards;
+  @keyframes slidein {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(-15%);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  --animate-slideout: slideout 0.4s cubic-bezier(0.36, 1.01, 0.32, 1) forwards;
+  @keyframes slideout {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  --color-highlight-text: #7b57e0;
+  --color-primary-text: #e3e3e3;
+  --color-secondary-text: #b8c0cc;
+  --color-error-text: #f53b30;
+  --color-success-text: #2aa31f;
+
+  --color-purpure: #7b57e0;
+  --color-gray-stroke: #576776;
+  --color-unit-bg: #191d23;
+  --color-unit-bg2: #262c36;
+  --color-gray-bg: #0d0f11;
+  --color-gray-dash: #334e68;
+  --color-app-green: #47a785;
+  --color-app-blue: #5395cf;
+  --color-app-salmon: #f9837c;
+  --color-app-yellow: #efb047;
+}

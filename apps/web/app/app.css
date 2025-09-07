@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "@repo/ui/styles.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-poppins: Poppins, sans-serif;
+
+  --color-highlight-text: #7b57e0;
+  --color-primary-text: #e3e3e3;
+  --color-secondary-text: #b8c0cc;
+  --color-error-text: #f53b30;
+  --color-success-text: #2aa31f;
+
+  --color-purpure: #7b57e0;
+  --color-gray-stroke: #576776;
+  --color-unit-bg: #191d23;
+  --color-canvas-bg: #191d23;
+  --color-canvas-compo: #262c36;
+  --color-unit-bg2: #262c36;
+  --color-gray-bg: #0d0f11;
+  --color-gray-dash: #334e68;
+  --color-app-green: #47a785;
+  --color-app-blue: #5395cf;
+  --color-app-salmon: #f9837c;
+  --color-app-yellow: #efb047;
+
+  --animate-fadeIn: fadeIn 0.5s ease-in-out forwards;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
