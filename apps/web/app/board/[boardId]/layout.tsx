@@ -7,7 +7,7 @@ export default async function CanvasLayout({
   children: React.ReactElement;
   params: { boardId: string };
 }) {
-  const { boardId } = await params;
+  const { boardId } = params;
   return (
     <CombinedContextProvider boardId={boardId}>
       {children}
